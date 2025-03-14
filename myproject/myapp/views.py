@@ -7,15 +7,13 @@ def home(request):
 
 
 def about(request):
-    return render(request,'about.html')
-
+    return render(request, 'myapp/about.html')
 
 
 
 def log_in(request):
-    return render(request, 'login.html')
-
+    return render(request, 'myapp/log_in.html')
 
 
 def sign_up(request):
-    return render(request, 'signup.html')
+    return render(request, 'myapp/sign_up.html')

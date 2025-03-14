@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Головна</title>
 </head>
 <body>
-    
+
+    <a href="{% url 'home' %}">Головна</a>
+    <a href="{% url 'about' %}">Про нас</a>
+    <a href="{% url 'sign_up' %}">Зареєструватися</a>
+    <a href="{% url 'log_in' %}">Увійти</a>
+
 </body>
 </html>
