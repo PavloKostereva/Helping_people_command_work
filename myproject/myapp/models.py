@@ -1,14 +1,19 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+
 class User(AbstractUser):
+    
     ROLE_CHOICES = [
         ('donor', 'Благодійник'),
         ('seeker', 'Людина, якій потрібна допомога'),
     ]
     role = models.CharField(max_length=10, choices=ROLE_CHOICES)
+
     email_verified = models.BooleanField(default=False)
     phone_verified = models.BooleanField(default=False)
+    points_balance = models.IntegerField(default=0)
+
     
     groups = models.ManyToManyField(
         'auth.Group', related_name='custom_user_groups', blank=True
@@ -35,7 +40,7 @@ class HelpRequest(models.Model):
     qr_code = models.CharField(max_length=255, blank=True)
 
     def generate_qr_code(self):
-        pass  # Логіка генерації QR-коду
+        pass
 
 
 class Donation(models.Model):
@@ -75,14 +80,20 @@ class Rating(models.Model):
         User, on_delete=models.CASCADE, limit_choices_to={'role': 'donor'}, related_name='given_ratings'
     )
     receiver = models.ForeignKey(
+
+
         User, on_delete=models.CASCADE, limit_choices_to={'role': 'seeker'}, related_name='received_ratings'
     )
+
     rating = models.IntegerField(choices=RATING_CHOICES)
+
     review = models.TextField(blank=True)
+
     created_at = models.DateTimeField(auto_now_add=True)
 
 
 class Transaction(models.Model):
+
     donor = models.ForeignKey(
         User, on_delete=models.CASCADE, limit_choices_to={'role': 'donor'}
     )
