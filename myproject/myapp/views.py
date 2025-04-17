@@ -17,3 +17,6 @@ def log_in(request):
 
 def sign_up(request):
     return render(request, 'myapp/sign_up.html')
+
+def instruction(request):
+    return render(request, 'myapp/instruction.html')

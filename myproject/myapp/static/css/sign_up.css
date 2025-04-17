@@ -1,0 +1,23 @@
+body{
+    font-family: Arial, sans-serif;
+    display:flex;
+    justify-content: space space-between;
+    padding: 20px;
+}
+
+.registration-form{
+    width: 50%;
+    padding: auto;
+}
+
+.green-right{
+    background-color: #568223;
+    color:aliceblue;
+    padding: 20px;
+    display: flex;
+    width:100px;
+    height: 100vh;
+
+
+
+}

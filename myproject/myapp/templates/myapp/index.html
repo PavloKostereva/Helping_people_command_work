@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Головна</title>
-</head>
-<body>
-
-    <a href="{% url 'home' %}">Головна</a>
-    <a href="{% url 'about' %}">Про нас</a>
-    <a href="{% url 'sign_up' %}">Зареєструватися</a>
-    <a href="{% url 'log_in' %}">Увійти</a>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../../static/css/index.css" />
+  </head>
+  <body>
+    <nav>
+      <ul class="top-menu">
+        <li><a href="{% url 'home' %}">Головна</a></li>
+        <li><a href="{% url 'about' %}">Про нас</a></li>
+        <li><a href="{%url 'instruction'%}">Інструкція</a></li>
+        <li><a href="{% url 'sign_up' %}">Зареєструватися</a></li>
+        <li><a href="{% url 'log_in' %}">Увійти</a></li>
+      </ul>
+    </nav>
+  </body>
 </html>
