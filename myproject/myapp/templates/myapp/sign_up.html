@@ -3,19 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>Реєстрація- Kindhelp</title>
     <link rel="stylesheet" href="../../static/css/sign_up.css">
 </head>
 <body>
-    <div class="registration-form">
-        <ul>
-            <li>Адреса електроннох пошти</li>
-            <li>Ім'я</li>
-            <li>Прізвище</li>
-            <li>Пароль</li>
-            <li>Про себе</li>
-        </ul>
+    <div class="green_side"></div>
+
+
+    <div class="registration-container">
+        <div class="logo"></div>
+        <button class="change_lang">Українська ▼</button>
     </div>
-    <div class="green-right"></div>
+
+    <a>Повернутися на головну сторінку</a>
+
+    <div class="registration-form">
+        <h1>Реєстрація</h1>
+
+        <div class="form-group">
+            <label for="email">Ваша електронна пошта</label>
+            <input type="email" id="email" placeholder="Введіть свій email" required>
+        </div>
+            <div class="form-group">
+                <label for="lastName">Прізвище</label>
+                <input type="text" id="lastName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="about">Про себе</label>
+                <textarea id="about"></textarea>
+                <p class="optional">Не обов'язково</p>
+            </div>
+            
+            <button class="btn_to_continue">Продовжити</button>
+            
+            <div class="abo">або</div>
+            
+            <button class="google-btn">
+                <img id="google_photo" src="../../static/img/google.png" alt="Google">
+                Реєстрація з Google
+            </button>
+            
+            <a href="#" class="home-link">Повернутися на головну сторінку</a>
+        </div>
+    </div>
 </body>
 </html>
